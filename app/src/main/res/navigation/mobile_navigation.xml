@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mobileappy.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_crypto_conversion"
+            app:destination="@id/nav_crypto_conversion" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_currency_info"
+        android:name="com.example.mobileappy.ui.currency_info.CurrencyComparisonFragment"
+        android:label="@string/currency_info"
+        tools:layout="@layout/fragment_currency_comparison" >
+        <action
+            android:id="@+id/action_nav_currency_info_to_graphFragment"
+            app:destination="@id/graphFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_crypto_conversion"
+        android:name="com.example.mobileappy.ui.conversion.ConversionFragment2"
+        android:label="@string/crypto_conversion"
+        tools:layout="@layout/fragment_conversion" />
+    <fragment
+        android:id="@+id/graphFragment"
+        android:name="com.example.mobileappy.ui.graphs.GraphFragment"
+        android:label="@string/graph"
+        tools:layout="@layout/fragment_graph" >
+        <action
+            android:id="@+id/action_graphFragment_to_nav_currency_info"
+            app:destination="@id/nav_currency_info" />
+    </fragment>
+</navigation>

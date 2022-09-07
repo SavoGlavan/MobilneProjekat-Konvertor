@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundmobile"
+    tools:context=".ui.graphs.GraphFragment">
+
+    <com.jjoe64.graphview.GraphView
+        android:background="@color/analogus"
+        android:id="@+id/graphView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+    </com.jjoe64.graphview.GraphView>
+
+    <TextView
+        android:id="@+id/testText"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:background="@drawable/rounded_corner_view"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp">
+
+    </TextView>
+</FrameLayout>

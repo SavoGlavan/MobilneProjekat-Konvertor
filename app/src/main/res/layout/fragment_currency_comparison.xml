@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/backgroundmobile"
+
+    tools:context=".ui.currency_info.CurrencyComparisonFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:context=".ui.conversion.ConversionFragment2"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/select"
+            app:hintTextColor="@color/teal_200"
+            android:enabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_first_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="true"
+                android:inputType="text|textNoSuggestions"
+                android:background="@drawable/rounded_corner_view">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+    </ScrollView>
+    <ScrollView
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        tools:context=".ui.conversion.ConversionFragment2">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/prvimeni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:enabled="true"
+            android:hint="@string/select"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:enabled="true"
+                android:id="@+id/auto_complete_second_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions"
+                android:background="@drawable/rounded_corner_view">
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/compareButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/compare"
+        android:layout_marginTop="470dp"
+        style="@style/ButtonStyle"
+        android:layout_gravity="center_horizontal">
+    </Button>
+
+
+    <Button
+        android:id="@+id/endDateButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="275dp"
+        android:layout_marginTop="395dp"
+        style="@style/ButtonStyle"
+        android:text="@string/change">
+    </Button>
+    <Button
+        android:id="@+id/startDateButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="275dp"
+        android:layout_marginTop="325dp"
+        style="@style/ButtonStyle"
+        android:text="@string/change">
+    </Button>
+
+    <TextView
+        android:id="@+id/startDateView"
+        android:textSize="22sp"
+        android:background="@drawable/rounded_corner_view"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginLeft="15dp"
+        ></TextView>
+    <TextView
+        android:id="@+id/endDateView"
+        android:textSize="22sp"
+        android:background="@drawable/rounded_corner_view"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="395dp"
+        android:layout_marginLeft="15dp"
+        ></TextView>
+
+    <ScrollView
+        android:layout_marginTop="100dp"
+        android:layout_width="240dp"
+        android:layout_height="100dp"
+        tools:context=".ui.conversion.ConversionFragment2">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:enabled="true"
+            android:hint="@string/mode"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+            <AutoCompleteTextView
+                android:enabled="true"
+                android:id="@+id/auto_complete_mode_comparison"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text|textNoSuggestions"
+                android:background="@drawable/rounded_corner_view">
+
+            </AutoCompleteTextView>
+        </com.google.android.material.textfield.TextInputLayout>
+    </ScrollView>
+    <ImageButton
+        android:id="@+id/swapButtonComparison"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="110dp"
+        style="@style/ButtonStyle"
+        android:src="@drawable/ic_swap"
+        android:text="@string/swap">
+    </ImageButton>
+</FrameLayout>
