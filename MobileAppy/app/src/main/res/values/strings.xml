@@ -26,7 +26,6 @@
     <string name="change">Change</string>
     <string name="mode">Select Mode</string>
     <string name="graph">Graph</string>
-    <string name="description">Easy Currency Converter is mobile application for android devices that allows users to convert both national and cryptocurrencies.Our users can choose any combination out of 200 national and over 1500 cryptocurrencies and convert using both present and historical ratesfrom 1.1.2000 upwards. </string>
-    <string name="newdescirption">Easy Currency Converter is mobile application for android devices that allows users to convert both national and cryptocurrencies.Our users can choose any combination out of 200 national and over 1500 cryptocurrencies and convert them using both present and historical rates from the date 01.01.2000 upwards. Aside from conversion we also offer a graphic representation of how a currency has fluctuated through time when compared to another.</string>
+    <string name="newdescirption">Easy Currency Converter is a mobile application for android devices that allows users to convert any combination out of 200 national and over 1500 cryptocurrencies using both present and historical rates from 01.01.2000 onwards. Aside from conversion we also offer a graphic representation of how a currency has fluctuated through time when compared to another.</string>
     <string name="get_started">Get Started</string>
 </resources>

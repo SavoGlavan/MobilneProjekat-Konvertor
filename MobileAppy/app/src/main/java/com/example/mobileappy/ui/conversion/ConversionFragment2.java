@@ -202,7 +202,6 @@ public class ConversionFragment2 extends Fragment implements DatePickerDialog.On
     }
     public void getData(){
         q= Volley.newRequestQueue(v.getContext());
-        Toast.makeText(v.getContext(), "getData called", Toast.LENGTH_SHORT).show();
         JsonObjectRequest req= new JsonObjectRequest(Request.Method.GET, url,null , new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -257,9 +256,9 @@ public class ConversionFragment2 extends Fragment implements DatePickerDialog.On
                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                                            String []data=adapterView.getItemAtPosition(i).toString().split("-");
                                            currencykey1=data[data.length-1];
-                                           //avt.setText("");
+
                                            currency1=adapterView.getItemAtPosition(i).toString();
-                                           //Toast.makeText(v.getContext(), currencykey1, Toast.LENGTH_SHORT).show();
+
                                        }
                                    }
         );
@@ -271,7 +270,7 @@ public class ConversionFragment2 extends Fragment implements DatePickerDialog.On
 
                                             currencykey2=data[data.length-1];
                                             currency2=adapterView.getItemAtPosition(i).toString();
-                                            Toast.makeText(v.getContext(), currencykey2, Toast.LENGTH_SHORT).show();
+
                                         }
                                     }
         );
@@ -301,6 +300,8 @@ public class ConversionFragment2 extends Fragment implements DatePickerDialog.On
                                                 avt2.setAdapter(adapterCrypto);
                                                 crypto=true;
                                             }
+                                            avt.setText("");
+                                            avt2.setText("");
 
                                         }
                                     }

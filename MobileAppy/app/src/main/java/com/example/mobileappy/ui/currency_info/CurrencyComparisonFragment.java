@@ -150,9 +150,9 @@ public class CurrencyComparisonFragment extends Fragment implements DatePickerDi
                                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                                            String []data=adapterView.getItemAtPosition(i).toString().split("-");
                                            currencykey1=data[data.length-1];
-                                           //avt.setText("");
+
                                            currency1=adapterView.getItemAtPosition(i).toString();
-                                           Toast.makeText(v.getContext(), currencykey1, Toast.LENGTH_SHORT).show();
+
                                        }
                                    }
         );
@@ -164,7 +164,7 @@ public class CurrencyComparisonFragment extends Fragment implements DatePickerDi
 
                                             currencykey2=data[data.length-1];
                                             currency2=adapterView.getItemAtPosition(i).toString();
-                                            Toast.makeText(v.getContext(), currencykey2, Toast.LENGTH_SHORT).show();
+
                                         }
                                     }
         );
@@ -195,7 +195,8 @@ public class CurrencyComparisonFragment extends Fragment implements DatePickerDi
                                                 atvSecond.setAdapter(adapterCrypto);
                                                 crypto=true;
                                             }
-
+                                            atvFirst.setText("");
+                                            atvSecond.setText("");
                                         }
                                     }
         );
@@ -217,7 +218,6 @@ public class CurrencyComparisonFragment extends Fragment implements DatePickerDi
                     if(crypto)
                         urlresult+="&source=crypto";
                     Log.d("url",urlresult);
-                    //Toast.makeText(getActivity().getApplicationContext(), urlresult, Toast.LENGTH_LONG).show();
                     JsonObjectRequest req= new JsonObjectRequest(Request.Method.GET, urlresult,null , new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject response) {

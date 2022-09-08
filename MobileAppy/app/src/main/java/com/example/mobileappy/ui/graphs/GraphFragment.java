@@ -90,26 +90,7 @@ public class GraphFragment extends Fragment {
                     }
 
                 }
-               /* gw.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
-                    @Override
-                    public String formatLabel(double value, boolean isValueX) {
-                        if(isValueX)
-                        {
-                            return sdf.format(new Date((long)value));
-                        }
-                        else
-                        return super.formatLabel(value, isValueX);
-                    }
-                });*/
-                //gw.getViewport().setScalableY(true);
-                //gw.getGridLabelRenderer().setVerticalLabelsVAlign();
-                //gw.getViewport().setXAxisBoundsManual(true);
-               /* gw.getGridLabelRenderer().setHorizontalAxisTitle("Date");
-                gw.getGridLabelRenderer().setHorizontalAxisTitleTextSize(60);
-                gw.getGridLabelRenderer().setVerticalAxisTitle("Value");
-                gw.getGridLabelRenderer().setVerticalAxisTitleTextSize(60);*/
-                //gw.getViewport().setScalable(true);
-                //gw.getViewport().setScrollable(true);
+
                 gw.getGridLabelRenderer().setHorizontalLabelsColor(ContextCompat.getColor(v.getContext(),R.color.teal200_dark));
                 gw.getGridLabelRenderer().setVerticalLabelsColor(ContextCompat.getColor(v.getContext(),R.color.teal200_dark));
                 gw.getGridLabelRenderer().setLabelFormatter(new DateAsXAxisLabelFormatter(v.getContext()));
@@ -119,11 +100,6 @@ public class GraphFragment extends Fragment {
         return v;
     }
 
-   /* @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(GraphViewModel.class);
 
-    }*/
 
 }
